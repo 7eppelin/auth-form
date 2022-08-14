@@ -34,19 +34,14 @@ module.exports = {
         "no-console": "warn",
         // react
         "react/react-in-jsx-scope": "off",
-        "react/jsx-filename-extension": [
-            "warn",
-            { extensions: [".js", ".tsx"] },
-        ],
+        "react/jsx-filename-extension": ["warn", { extensions: [".js", ".tsx"] }],
         "react/sort-comp": "off",
-        "react/jsx-no-literals": "warn",
         "react/prop-types": "off",
         "react/display-name": "off",
         "react/no-deprecated": "warn",
         "react/no-children-prop": "warn",
         "react/jsx-no-target-blank": "warn",
         "react/self-closing-comp": ["warn", { component: true, html: true }],
-        "react/jsx-fragments": ["warn", "element"],
         "react/jsx-curly-newline": "off",
         "react/destructuring-assignment": ["warn", "always"],
         "react/function-component-definition": [
@@ -56,16 +51,13 @@ module.exports = {
                 unnamedComponents: "arrow-function",
             },
         ],
-        "react/jsx-curly-brace-presence": [
-            "warn",
-            { props: "never", children: "always" },
-        ],
+        "react/jsx-curly-brace-presence": ["warn", { props: "never", children: "always" }],
 
         // React Hooks
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "error",
         quotes: ["error", "double", { avoidEscape: true }],
-        "prettier/prettier": ["error", { printWidth: 80 }],
+        "prettier/prettier": ["error", { printWidth: 100 }],
         "prefer-destructuring": [
             "error",
             {
@@ -83,10 +75,7 @@ module.exports = {
             },
         ],
         "@typescript-eslint/consistent-type-definitions": ["error", "type"],
-        "@typescript-eslint/no-unused-vars": [
-            "warn",
-            { argsIgnorePattern: "^_" },
-        ],
+        "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
         "padding-line-between-statements": [
             "warn",
             { blankLine: "always", prev: "multiline-block-like", next: "*" },
