@@ -56,8 +56,8 @@ module.exports = {
         // React Hooks
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "error",
-        quotes: ["error", "double", { avoidEscape: true }],
-        "prettier/prettier": ["error", { printWidth: 100 }],
+        quotes: ["warn", "double", { avoidEscape: true }],
+        "prettier/prettier": ["warn", { printWidth: 100 }],
         "prefer-destructuring": [
             "error",
             {
