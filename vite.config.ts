@@ -1,10 +1,10 @@
-import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
 
-const pkg = require("./package.json");
+const REPO_NAME = "auth-form";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  base: `/${pkg.name}/`,
+    plugins: [react()],
+    base: `/${REPO_NAME}/`,
 });
