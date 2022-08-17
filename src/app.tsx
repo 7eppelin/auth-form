@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import reactLogo from "./assets/react.svg";
-import { Typo } from "./components";
+import { Button, Typo } from "./components";
 import { COLOR } from "./constants";
 
 const Wrapper = styled.div`
@@ -21,6 +21,8 @@ export const App = () => {
             <a href="https://reactjs.org" target="_blank" rel="noreferrer">
                 <img src={reactLogo} className="logo react" alt="React logo" />
             </a>
+
+            <Button>{"click"}</Button>
         </Wrapper>
     );
 };

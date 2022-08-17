@@ -1,4 +1,5 @@
 import react from "@vitejs/plugin-react";
+import * as path from "path";
 import { defineConfig } from "vite";
 
 const REPO_NAME = "auth-form";
@@ -7,4 +8,9 @@ const REPO_NAME = "auth-form";
 export default defineConfig({
     plugins: [react()],
     base: `/${REPO_NAME}/`,
+    resolve: {
+        alias: {
+            src: path.resolve(__dirname, "src"),
+        },
+    },
 });

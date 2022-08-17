@@ -83,7 +83,7 @@ enum TypoVariant {
 
 type TypoVariantLiteral = `${TypoVariant}`;
 
-const ComponentsMap = {
+const COMPONENTS_MAP = {
     [TypoVariant.H1]: H1,
     [TypoVariant.H2]: H2,
     [TypoVariant.H3]: H3,
@@ -103,7 +103,7 @@ type Props = {
 
 export const Typo: FC<Props> = forwardRef<HTMLHeadingElement, Props>(
     ({ variant, children, ...styleProps }, ref) => {
-        const Component = ComponentsMap[variant];
+        const Component = COMPONENTS_MAP[variant];
 
         return (
             <Component ref={ref} {...styleProps}>
