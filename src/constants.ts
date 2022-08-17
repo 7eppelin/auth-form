@@ -1,14 +1,15 @@
-export const COLOR = {
+export const PALETTE = {
     WHITE: "#FFF",
-    BLACK: "#173348",
+    BLACK: "#212529",
 
-    GREY_100: "#F7F8F9",
-    GREY_200: "#EFF1F4",
-    GREY_300: "#DEE3E9",
-    GREY_400: "#C6CED8",
-    GREY_600: "#54687D",
-    GREY_700: "#425468",
-    GREY_800: "#173348",
+    GREY_100: "#F8F9FA",
+    GREY_200: "#E9ECEF",
+    GREY_300: "#DEE2E6",
+    GREY_400: "#CED4DA",
+    GREY_500: "#ADB5BD",
+    GREY_600: "#6C757D",
+    GREY_700: "#495057",
+    GREY_800: "#343A40",
 
     BLUE_200: "#E9F5FF",
     BLUE_300: "#D2EBFF",
@@ -27,3 +28,5 @@ export const COLOR = {
     ORANGE_200: "#FFF9E5",
     ORANGE_400: "#FEB31E",
 } as const;
+
+export type PaletteColor = typeof PALETTE[keyof typeof PALETTE];

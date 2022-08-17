@@ -1,7 +1,7 @@
 import { ButtonHTMLAttributes, FC, ReactNode } from "react";
 import styled from "styled-components";
 
-import { COLOR } from "src/constants";
+import { PALETTE } from "src/constants";
 
 const BaseButton = styled.button`
     display: flex;
@@ -25,28 +25,28 @@ const BaseButton = styled.button`
 `;
 
 const PrimaryButton = styled(BaseButton)`
-    background: ${COLOR.BLUE_400};
-    color: ${COLOR.WHITE};
+    background: ${PALETTE.BLUE_400};
+    color: ${PALETTE.WHITE};
 
     :hover:not(:disabled) {
-        background-color: ${COLOR.BLUE_500};
+        background-color: ${PALETTE.BLUE_500};
     }
 
     :active:not(:disabled) {
-        background-color: ${COLOR.BLUE_400};
+        background-color: ${PALETTE.BLUE_400};
     }
 `;
 
 const SecondaryButton = styled(BaseButton)`
-    background: ${COLOR.WHITE};
-    color: ${COLOR.BLACK};
+    background: ${PALETTE.WHITE};
+    color: ${PALETTE.BLACK};
 
     :hover:not(:disabled) {
-        background-color: ${COLOR.GREY_200};
+        background-color: ${PALETTE.GREY_200};
     }
 
     :active:not(:disabled) {
-        background-color: ${COLOR.GREY_300};
+        background-color: ${PALETTE.GREY_300};
     }
 `;
 

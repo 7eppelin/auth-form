@@ -1,10 +1,10 @@
 import { FC, forwardRef, ReactNode } from "react";
 import styled from "styled-components";
 
-import { COLOR } from "src/constants";
+import { PaletteColor } from "src/constants";
 
 type StyleProps = {
-    color?: typeof COLOR[keyof typeof COLOR];
+    color?: PaletteColor;
 };
 
 const applyCustomStyles = (styleProps: StyleProps) => {
