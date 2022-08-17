@@ -4,6 +4,7 @@
         "useDefineForClassFields": true,
         "lib": ["DOM", "DOM.Iterable", "ESNext"],
         "types": ["vite/client", "node"],
+        "baseUrl": ".",
         "allowJs": false,
         "skipLibCheck": true,
         "esModuleInterop": false,
@@ -15,8 +16,11 @@
         "resolveJsonModule": true,
         "isolatedModules": true,
         "noEmit": true,
-        "jsx": "react-jsx"
+        "jsx": "react-jsx",
+        "paths": {
+            "src": ["src/*"]
+        }
     },
-    "include": ["src"],
+    "include": ["./src"],
     "references": [{ "path": "./tsconfig.node.json" }]
 }
