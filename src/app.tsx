@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import reactLogo from "./assets/react.svg";
+import { Typo } from "./components";
 import { COLOR } from "./constants";
 
 const Wrapper = styled.div`
@@ -15,7 +16,8 @@ const Wrapper = styled.div`
 export const App = () => {
     return (
         <Wrapper>
-            <p>{"Hello there!"}</p>
+            <Typo variant="h1">{"Hello there!"}</Typo>
+
             <a href="https://reactjs.org" target="_blank" rel="noreferrer">
                 <img src={reactLogo} className="logo react" alt="React logo" />
             </a>
