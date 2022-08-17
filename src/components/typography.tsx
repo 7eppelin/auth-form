@@ -1,7 +1,7 @@
 import { FC, forwardRef, ReactNode } from "react";
 import styled from "styled-components";
 
-import { COLOR } from "../constants";
+import { COLOR } from "src/constants";
 
 type StyleProps = {
     color?: typeof COLOR[keyof typeof COLOR];
