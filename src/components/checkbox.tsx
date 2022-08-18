@@ -13,7 +13,7 @@ const StyledLabel = styled.label`
 
 // Hide checkbox visually but remain accessible to screen readers.
 // Source: https://polished.js.org/docs/#hidevisually
-const HiddenCheckbox = styled.input.attrs({ type: "checkbox" })`
+const HiddenNativeCheckbox = styled.input.attrs({ type: "checkbox" })`
     clip: rect(0 0 0 0);
     height: 1px;
     margin: -1px;
@@ -35,7 +35,7 @@ const StyledCheckbox = styled.div`
     padding: 0 2px;
     transition: ease 0.2s;
 
-    ${HiddenCheckbox}:focus + & {
+    ${HiddenNativeCheckbox}:focus + & {
         border: 1px solid ${PALETTE.BLACK};
     }
 
@@ -66,7 +66,7 @@ type Props = {
 export const Checkbox: React.FC<Props> = ({ id, label, checked, onChange }) => {
     return (
         <StyledLabel htmlFor={id}>
-            <HiddenCheckbox id={id} checked={checked} onChange={onChange} />
+            <HiddenNativeCheckbox id={id} checked={checked} onChange={onChange} />
             <StyledCheckbox data-checked={checked}>
                 <Switch data-checked={checked} />
             </StyledCheckbox>
