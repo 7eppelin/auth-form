@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 
 import reactLogo from "./assets/react.svg";
-import { Button, TextInput, Typo } from "./components";
+import { Button, Checkbox, TextInput, Typo } from "./components";
 import { PALETTE } from "./constants";
 
 const Wrapper = styled.div`
@@ -18,10 +18,18 @@ const Wrapper = styled.div`
 
 export const App = () => {
     const [inputValue, changeInputValue] = useState("");
+    const [checked, setIsChecked] = useState(false);
 
     return (
         <Wrapper>
             <Typo variant="h1">{"Hello there!"}</Typo>
+
+            <Checkbox
+                id="test"
+                label="check me"
+                checked={checked}
+                onChange={() => setIsChecked(!checked)}
+            />
 
             <a href="https://reactjs.org" target="_blank" rel="noreferrer">
                 <img src={reactLogo} className="logo react" alt="React logo" />
