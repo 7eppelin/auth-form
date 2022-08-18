@@ -38,7 +38,7 @@
         "eslint-plugin-react-hooks": "4.6.0",
         "eslint-plugin-simple-import-sort": "7.0.0",
         "husky": "8.0.0",
-        "lint-staged": "13.0.3",
+        "lint-staged": "12.4.3",
         "prettier": "2.7.1",
         "ts-unused-exports": "8.0.0",
         "tsm": "2.2.2",
