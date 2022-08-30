@@ -30,3 +30,7 @@ export const PALETTE = {
 } as const;
 
 export type PaletteColor = typeof PALETTE[keyof typeof PALETTE];
+
+export const BOX_SHADOW = "0 5px 10px 0px rgb(0, 0, 0, 0.15)";
+
+export const SELECT_OPTIONS = ["Option A", "Option B", "Option C"];
