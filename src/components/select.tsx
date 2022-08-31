@@ -1,11 +1,15 @@
 import { FC, useRef, useState } from "react";
 import styled from "styled-components";
 
-import { BOX_SHADOW, PALETTE } from "src/constants";
+import { PALETTE } from "src/constants";
 import { useOnClickOutside } from "src/hooks";
 
 import { ChevronDownIcon } from "./icons";
 import { Typo } from "./typography";
+
+const BOX_SHADOW = "0 5px 10px 0px rgb(0, 0, 0, 0.15)";
+
+const ICON_SIZE = "18px";
 
 const SelectWrapper = styled.div`
     width: 320px;
@@ -33,8 +37,6 @@ const Field = styled.div`
     }
 `;
 
-const ICON_SIZE = "18px";
-
 const IconWrapper = styled.div`
     height: ${ICON_SIZE};
     position: absolute;
@@ -49,9 +51,8 @@ const IconWrapper = styled.div`
     }
 `;
 
-const UlStyled = styled.ul<{ isOpen: boolean }>`
+const UlStyled = styled.ul`
     width: 100%;
-    list-style: none;
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -121,7 +122,7 @@ export const Select: FC<Props> = ({ options, placeholder, value, onSelect }) => 
             </Field>
 
             {isOpen && (
-                <UlStyled isOpen={isOpen}>
+                <UlStyled>
                     {options.map((option, i) => (
                         <LiStyled onClick={() => handleSelect(option)} key={i}>
                             <Typo variant="small">{option}</Typo>

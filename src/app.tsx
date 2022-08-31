@@ -3,7 +3,9 @@ import styled from "styled-components";
 
 import reactLogo from "./assets/react.svg";
 import { Button, Checkbox, Select, TextInput, Typo } from "./components";
-import { PALETTE, SELECT_OPTIONS } from "./constants";
+import { PALETTE } from "./constants";
+
+const SELECT_OPTIONS = ["Option A", "Option B", "Option C"];
 
 const Wrapper = styled.div`
     background: ${PALETTE.WHITE};
