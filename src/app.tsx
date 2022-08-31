@@ -2,8 +2,10 @@ import { useState } from "react";
 import styled from "styled-components";
 
 import reactLogo from "./assets/react.svg";
-import { Button, Checkbox, TextInput, Typo } from "./components";
+import { Button, Checkbox, Select, TextInput, Typo } from "./components";
 import { PALETTE } from "./constants";
+
+const SELECT_OPTIONS = ["Option A", "Option B", "Option C"];
 
 const Wrapper = styled.div`
     background: ${PALETTE.WHITE};
@@ -19,6 +21,7 @@ const Wrapper = styled.div`
 export const App = () => {
     const [inputValue, changeInputValue] = useState("");
     const [checked, setIsChecked] = useState(false);
+    const [selectOption, setSelectOption] = useState("");
 
     return (
         <Wrapper>
@@ -29,6 +32,13 @@ export const App = () => {
                 label="check me"
                 checked={checked}
                 onChange={() => setIsChecked(!checked)}
+            />
+
+            <Select
+                options={SELECT_OPTIONS}
+                value={selectOption}
+                placeholder="Select Option"
+                onSelect={(option) => setSelectOption(option)}
             />
 
             <a href="https://reactjs.org" target="_blank" rel="noreferrer">
