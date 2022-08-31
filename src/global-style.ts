@@ -42,9 +42,10 @@ export const GlobalStyle = createGlobalStyle`
 		cursor: pointer;
 	}
 
-	input {
+	input, textarea {
 		border: none;
 		outline: none;
+		font-family: inherit;
 	}
 
 	a {
