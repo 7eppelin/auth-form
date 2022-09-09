@@ -19,9 +19,10 @@ const Wrapper = styled.div`
 `;
 
 export const App = () => {
-    const [inputValue, changeInputValue] = useState("");
+    const [inputValue, setInputValue] = useState("");
     const [checked, setIsChecked] = useState(false);
     const [selectOption, setSelectOption] = useState("");
+    const [textareaValue, setTextareaValue] = useState("");
 
     return (
         <Wrapper>
@@ -47,10 +48,17 @@ export const App = () => {
 
             <TextInput
                 value={inputValue}
-                onChange={changeInputValue}
+                onChange={setInputValue}
                 label="input"
                 error="ERRORORORO"
                 required
+            />
+
+            <TextInput
+                value={textareaValue}
+                onChange={setTextareaValue}
+                type="textarea"
+                label="textarea"
             />
 
             <Button>{"click"}</Button>
